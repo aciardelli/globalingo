@@ -15,7 +15,7 @@ const io = new Server(server, {
 });
 
 io.on('connection', (socket) => {
-    console.log(socket.id);
+    console.log(`USER CONNECTED: ${socket.id}`);
 
     socket.on('disconnect', () => {
         console.log('user disconnected', socket.id)
