@@ -25,7 +25,7 @@ function Chat({ socket, username, room }) {
         <div className="chat-body"></div>
         <div className="chat-footer">
             <input type="text" placeholder="Say something..." onChange={(event) => setCurrentMessage(event.target.value)}/>
-            <button onClick={sendMessage}>&#9658</button>
+            <button onClick={sendMessage}>Send</button>
         </div>
     </div>
   )
