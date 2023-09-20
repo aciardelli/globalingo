@@ -18,10 +18,12 @@ function App() {
 
   return (
     <div className="App">
-      <h3>Join a Chat</h3>
-      <input type="text" placeholder='Anthony...' onChange={(event) => {setUsername(event.target.value)}}/>
-      <input type="text" placeholder='Room...' onChange={(event) => {setRoom(event.target.value)}}/>
-      <button onClick={joinRoom}>Join</button>
+      <div className="sign-in">
+        <h3>Join a Chat</h3>
+        <input id="username" type="text" placeholder='Anthony...' onChange={(event) => {setUsername(event.target.value)}}/>
+        <input id="roomid" type="text" placeholder='Room...' onChange={(event) => {setRoom(event.target.value)}}/>
+        <button onClick={joinRoom}>Join</button>
+      </div>
 
       <Chat socket={socket} username={username} room={room} />
     </div>
