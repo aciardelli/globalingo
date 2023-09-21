@@ -73,17 +73,16 @@ body {
 .chat-footer input {
   width: 300px;
   height: 40px;
-  margin: 10px;
+  margin: 10px 0;
   border-radius: 5px;
   outline: none;
   border: 2px solid #50c878;
 }
 
 .chat-footer button {
-  width: 80px;
+  width: 100px;
   height: 40px;
-  margin: 10px;
-  padding: 10px;
+  margin: 10px 0;
   border-radius: 5px;
   outline: none;
   background-color: #0da2ff;
