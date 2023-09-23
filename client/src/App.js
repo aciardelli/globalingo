@@ -22,9 +22,14 @@ function App() {
     <div className="App">
       {!showChat ? (
         <div className="sign-in">
-          <h3>Join a Chat</h3>
+          <h3>Globalingo</h3>
           <input id="username" type="text" placeholder='Anthony...' onChange={(event) => {setUsername(event.target.value)}}/>
           <input id="roomid" type="text" placeholder='Room...' onChange={(event) => {setRoom(event.target.value)}}/>
+          <select id="language-select">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <option value="es">Spanish</option>
+          </select>
           <button onClick={joinRoom}>Join</button>
         </div>
       ) : (

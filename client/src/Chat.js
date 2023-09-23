@@ -19,7 +19,7 @@ function Chat({ socket, username, room }) {
             setMessageList((list) => [...list, messageData]);
             setCurrentMessage("");
         }
-    }
+    };
 
     useEffect(() => {
         socket.on("receive_message", (msgData) => {
