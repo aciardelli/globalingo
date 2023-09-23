@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import ScrollToBottom from 'react-scroll-to-bottom';
+import translate from 'translate';
 
-function Chat({ socket, username, room }) {
+function Chat({ socket, username, room, language }) {
 
     const [currentMessage, setCurrentMessage] = React.useState("");
     const [messageList, setMessageList] = React.useState([]);
@@ -22,10 +23,17 @@ function Chat({ socket, username, room }) {
     };
 
     useEffect(() => {
-        socket.on("receive_message", (msgData) => {
-            setMessageList((list) => [...list, msgData]);
+        socket.on("receive_message", async (msgData) => {
+            await translate(msgData.message, {to: language }).then(text => {
+                msgData.message = text;
+            });
+          setMessageList((list) => [...list, msgData]);
         })
-    }, [socket]);
+
+        return () => {
+            socket.off("receive_message");
+        }
+      }, [socket, language]);
 
   return (
     <div className="chat-room">

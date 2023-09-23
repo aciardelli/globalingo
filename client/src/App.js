@@ -9,6 +9,7 @@ function App() {
 
   const [username, setUsername] = useState('');
   const [room, setRoom] = useState('');
+  const [language, setLanguage] = useState('en'); // ['en', 'fr', 'es'
   const [showChat, setShowChat] = useState(false);
 
   const joinRoom = () => {
@@ -25,7 +26,7 @@ function App() {
           <h3>Globalingo</h3>
           <input id="username" type="text" placeholder='Anthony...' onChange={(event) => {setUsername(event.target.value)}}/>
           <input id="roomid" type="text" placeholder='Room...' onChange={(event) => {setRoom(event.target.value)}}/>
-          <select id="language-select">
+          <select id="language-select" onChange={(event) => {setLanguage(event.target.value)}}>
             <option value="en">English</option>
             <option value="fr">French</option>
             <option value="es">Spanish</option>
@@ -33,7 +34,7 @@ function App() {
           <button onClick={joinRoom}>Join</button>
         </div>
       ) : (
-        <Chat socket={socket} username={username} room={room} />
+        <Chat socket={socket} username={username} room={room} language={language} />
       )};
 
     </div>
