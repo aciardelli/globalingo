@@ -30,6 +30,7 @@ function App() {
             <option value="en">English</option>
             <option value="fr">French</option>
             <option value="es">Spanish</option>
+            <option value="ro">Romanian</option>
           </select>
           <button onClick={joinRoom}>Join</button>
         </div>

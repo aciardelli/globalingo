@@ -42,6 +42,7 @@ function Chat({ socket, username, room, language }) {
   return (
     <div className="chat-room">
         <div className="chat-header">
+            <h1>Globalingo</h1>
             <p>Live Chat</p>
         </div>
         <div className="chat-body">

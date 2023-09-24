@@ -20,7 +20,7 @@ body {
   padding: 0%;
 }
 
-/* ################################## */
+/* ############### SIGN IN PAGE ################### */
 
 .sign-in {
   display: flex;
@@ -57,11 +57,22 @@ body {
   cursor: pointer;
 }
 
-/* ################################## */
+/* ############# CHAT PAGE ##################### */
 
 .chat-header {
   text-align: center;
-  font-size: 2rem;
+  padding: 1rem 0;
+  margin: 0;
+}
+
+.chat-header h1 {
+  padding: .5rem 0;
+  margin: 0;
+}
+
+.chat-header p {
+  padding: .5rem 0;
+  margin: 0;
 }
 
 .chat-body {
@@ -76,24 +87,20 @@ body {
 }
 
 .chat-footer input {
-  width: 300px;
-  height: 40px;
-  margin: 10px 0;
-  border-radius: 5px;
+  width: 80%;
   outline: none;
-  border: 2px solid #50c878;
+  border: 2px solid #000;
+  padding: 5px;
 }
 
 .chat-footer button {
-  width: 100px;
-  height: 40px;
-  margin: 10px 0;
-  border-radius: 5px;
+  width: 20%;
   outline: none;
   background-color: #0da2ff;
   color: white;
   font-weight: bold;
   cursor: pointer;
+  padding: 5px;
 }
 
 .message {
@@ -131,6 +138,7 @@ body {
 
 .message-meta {
   display: flex;
+  font-size: 0.75rem;
 }
 
 #you {
@@ -139,6 +147,11 @@ body {
 
 #you .message-content {
   background-color: #0da2ff;
+  justify-content: flex-end;
+}
+
+#you .message-meta {
+  justify-content: flex-end;
 }
 
 #other {
@@ -148,5 +161,13 @@ body {
 #other .message-content {
   background-color: #FAF9F6;
   color: #212121;
+  justify-content: flex-start;
 }
 
+#other .message-meta {
+  justify-content: flex-start;
+}
+
+#author {
+  padding: 0 5px;
+}
