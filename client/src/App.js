@@ -31,6 +31,17 @@ function App() {
             <option value="fr">French</option>
             <option value="es">Spanish</option>
             <option value="ro">Romanian</option>
+
+            <option value="ru">Russian</option>
+            <option value="de">German</option>
+            <option value="it">Italian</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <option value="zh-CN">Chinese</option>
+            <option value="ar">Arabic</option>
+            <option value="hi">Hindi</option>
+            <option value="pt">Portuguese</option>
+            
           </select>
           <button onClick={joinRoom}>Join</button>
         </div>
