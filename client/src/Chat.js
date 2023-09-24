@@ -13,6 +13,7 @@ function Chat({ socket, username, room, language }) {
                 room: room,
                 author: username,
                 message: currentMessage,
+                language: language,
                 time: new Date(Date.now()).getHours() + ":" + new Date(Date.now()).getMinutes()
             }
 
@@ -24,7 +25,10 @@ function Chat({ socket, username, room, language }) {
 
     useEffect(() => {
         socket.on("receive_message", async (msgData) => {
-            await translate(msgData.message, {to: language }).then(text => {
+            console.log(msgData);
+            console.log("Language from: " + msgData.language);
+            console.log("Language to: " + language);
+            await translate(msgData.message, { from: msgData.language, to: language }).then(text => {
                 msgData.message = text;
             });
           setMessageList((list) => [...list, msgData]);
